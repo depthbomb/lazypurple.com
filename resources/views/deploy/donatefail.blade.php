@@ -11,10 +11,10 @@
 	</div>
 	<div class="message-body">
 		<p>
-			There was a problem processing your donation. It might be a good idea to contact a staff member to help solve this issue.
+			Your donation was not accepted!
 		</p>
 		<p>
-			Some useful info or anything else you wanna say.
+			There was a problem processing your donation. Please try again later and if the problem persists contact <a href="https://steamcommunity.com/profiles/76561198123484662"><span class="mdi mdi-steam"></span> Serket</a> or <a href="https://steamcommunity.com/profiles/76561198043790590"><span class="mdi mdi-steam"></span> Strider</a> for alternate methods of donating.
 		</p>
 		<p class="has-margin-t-lg">
 			<a href="{{ route('index') }}">Return to home</a>
