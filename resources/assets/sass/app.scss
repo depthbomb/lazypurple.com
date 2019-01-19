@@ -1,4 +1,4 @@
-@import './vendor/bulma/bulma';
+@import './vendor/bootstrap/bootstrap';
 @import './vendor/mdi/materialdesignicons';
 
 @import './animations';
@@ -22,7 +22,6 @@ body {
 	flex-direction: column;
 	justify-content: space-between;
 
-	color: $white-ter;
 	background-color: #37474F;
 	background-image: url('/assets/img/pattern-d-10.png');
 	background-position: 0 0;
@@ -30,7 +29,7 @@ body {
 	overflow: auto;
 }
 
-.navbar-link {
+.nav-link {
 
 	.mdi {
 		width: 1.25rem;
@@ -47,7 +46,7 @@ body {
 	transition: 250ms all ease-in-out;
 
 	a {
-		color: $white-ter;
+		color: $white;
 	}
 
 	.mdi-heart {
@@ -106,55 +105,4 @@ body {
 			display: inline-block;
 		}
 	}
-}
-
-/**
-* Bulma does not have any spacing helper classes. How shitty is that?
-* "I don't want to bloat Bulma with helpers" the creator says...
-* What? Fine, I will make my own!
-*/
-$sizeUnit: rem;
-$marginKey: 'has-margin';
-$paddingKey: 'has-padding';
-$separator: '-';
-$sizes: (
-    ('none', 0),
-    ('xxs', 0.125),
-    ('xs', 0.25),
-    ('sm', 0.5),
-    ('md', 1),
-    ('lg', 2),
-    ('xl', 4),
-    ('xxl', 8),
-);
-$positions: (
-    ('t', 'top'),
-    ('r', 'right'),
-    ('b', 'bottom'),
-    ('l', 'left')
-);
-
-@function sizeValue($key, $value) {
-    @return if($key == 'none', 0, $value + $sizeUnit);
-}
-
-@each $size in $sizes {
-    $sizeKey: nth($size, 1);
-    $sizeValue: nth($size, 2);
-    .#{$marginKey}#{$separator}#{$sizeKey} {
-        margin: sizeValue($sizeKey, $sizeValue);
-    }
-    .#{$paddingKey}#{$separator}#{$sizeKey} {
-        padding: sizeValue($sizeKey, $sizeValue);
-    }
-    @each $position in $positions {
-        $posKey: nth($position, 1);
-        $posValue: nth($position, 2);
-        .#{$marginKey}#{$separator}#{$posKey}#{$separator}#{$sizeKey} {
-            margin-#{$posValue}: sizeValue($sizeKey, $sizeValue);
-        }
-        .#{$paddingKey}#{$separator}#{$posKey}#{$separator}#{$sizeKey} {
-            padding-#{$posValue}: sizeValue($sizeKey, $sizeValue);
-        }
-    }
 }

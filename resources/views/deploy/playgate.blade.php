@@ -14,27 +14,27 @@
 @endpush
 
 @section('content')
-<article class="message is-primary has-margin-t-xl">
-	<div class="message-header">
-		<p>Connecting to {{ $data['name'] }}</p>
+<div class="mt-5 card border border-primary">
+	<div class="card-header text-white bg-primary">
+		Connecting to {{ $data['name'] }}
 	</div>
-	<div class="message-body">
-		<p>
+	<div class="card-body">
+		<p class="lead">
 			You are on your way to <strong>{{ $data['name'] }}</strong>!
 		</p>
 		<p>
 			You will automatically be connected in 10 seconds. If you are not connected by that time, click the button below to join manually.
 		</p>
-		<div class="columns is-centered has-margin-t-lg">
-			<div class="column is-half">
-				<a href="{{ $data['connect_url'] }}" class="button is-primary is-fullwidth is-medium">
+		<div class="row">
+			<div class="col-lg-8 mx-auto">
+				<a href="{{ $data['connect_url'] }}" class="btn btn-primary btn-block btn-lg">
 					Play
 				</a>
-				<a href="{{ route('index') }}" class="button is-fullwidth is-small has-margin-t-sm">
+				<a href="{{ route('index') }}" class="mt-1 btn btn-block btn-sm">
 					Return to home
 				</a>
 			</div>
 		</div>
 	</div>
-</article>
+</div>
 @endsection
