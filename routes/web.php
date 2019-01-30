@@ -20,3 +20,5 @@ Route::get('donate-success', ['uses' => 'PageController@pageDonateSuccess', 'as'
 Route::get('donate-fail', ['uses' => 'PageController@pageDonateFail', 'as' => 'donatefail']);
 
 Route::get('connect-to/{ip}', ['uses' => 'PageController@connectToServer', 'as' => 'play']);
+
+Route::get('ajax/servers', ['uses' => 'AjaxController@servers']);

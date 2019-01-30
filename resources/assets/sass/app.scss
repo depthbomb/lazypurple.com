@@ -26,14 +26,7 @@ body {
 	background-image: url('/assets/img/pattern-d-10.png');
 	background-position: 0 0;
 	animation: bodyBg 25s linear infinite;
-	overflow: auto;
-}
-
-.nav-link {
-
-	.mdi {
-		width: 1.25rem;
-	}
+	overflow-x: hidden;
 }
 
 .app {

@@ -11,29 +11,38 @@
 --}}
 
 @section('content')
-<div class="card border border-primary">
-	<div class="card-header text-white bg-primary">
-		Rules &amp; Server Info
+<div class="mx-auto mb-5" style="width: 85%;">
+	<div id="servers">
+		<h3 class="mb-0 text-white text-center">
+			Loading&hellip;
+		</h3>
 	</div>
-	<div class="card-body">
-		<h1>
-			Server Info
-		</h1>
-		<p>
-			Test
-		</p>
-		<h1>
-			Server Rules
-		</h1>
-		<ul>
-			<li>Rule 1</li>
-			<li>Rule 2</li>
-			<li>Rule 3</li>
+</div>
+<div class="container">
+	<div class="card border border-primary">
+		<div class="card-header text-white bg-primary">
+			Rules &amp; Server Info
+		</div>
+		<div class="card-body">
+			<h1>
+				Server Info
+			</h1>
+			<p>
+				Coming real soon!
+			</p>
+			<h1>
+				Server Rules
+			</h1>
 			<ul>
-				<li>Nested rule 3 item</li>
+				<li>Rule 1</li>
+				<li>Rule 2</li>
+				<li>Rule 3</li>
+				<ul>
+					<li>Nested rule 3 item</li>
+				</ul>
+				<li>Rule 4</li>
 			</ul>
-			<li>Rule 4</li>
-		</ul>
+		</div>
 	</div>
 </div>
 @endsection

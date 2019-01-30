@@ -5,18 +5,18 @@
 @extends('layouts/simple', ['pageTitle' => 'An error has occurred'])
 
 @section('content')
-<article class="message is-danger has-margin-t-xl">
-	<div class="message-header">
-		<p>An error has occurred</p>
+<article class="card border-danger mt-5">
+	<div class="card-header text-white bg-danger">
+		An error has occurred
 	</div>
-	<div class="message-body">
+	<div class="card-body">
 		<p>
 			Your donation was not accepted!
 		</p>
 		<p>
 			There was a problem processing your donation. Please try again later and if the problem persists contact <a href="https://steamcommunity.com/profiles/76561198123484662"><span class="mdi mdi-steam"></span> Serket</a> or <a href="https://steamcommunity.com/profiles/76561198043790590"><span class="mdi mdi-steam"></span> Strider</a> for alternate methods of donating.
 		</p>
-		<p class="has-margin-t-lg">
+		<p class="mb-0">
 			<a href="{{ route('index') }}">Return to home</a>
 		</p>
 	</div>
